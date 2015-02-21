@@ -34,7 +34,6 @@
   },
   "devDependencies": {
     "rimraf": "^2.2.8",
-    "superagent": "^0.21.0",
     "tape": "^3.5.0"
   }
 }
