@@ -68,7 +68,9 @@ test('limit queue max concurrency', function(t) {
   var dbPath = path.resolve('./test/testjobs1.db');
   dbPaths.push(dbPath);
 
-  var maxConcurrency = 2;
+  var maxConcurrency = 5;
+  console.log('Max concurrency: ' + maxConcurrency);
+
   var q = new Queue({
     maxConcurrency: maxConcurrency,
     db: dbPath
@@ -85,6 +87,7 @@ test('limit queue max concurrency', function(t) {
 
   ['taskpush', 'taskstart', 'taskend'].forEach(function(event) {
     q.on(event, function() {
+      console.log('Num running concurrently: ' + q.running.length);
       t.ok(q.running.length <= maxConcurrency);
     })
   });
@@ -146,7 +149,6 @@ test('job status', function(t) {
       var data = JSON.parse(body).data;
       switch (data.status) {
         case 'pending':
-          console.log('queue check status again');
           setTimeout(checkStatus.bind(null, id), 1000);
           break;
         case 'success':
