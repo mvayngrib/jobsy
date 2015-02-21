@@ -16,9 +16,8 @@ query:
 
     curl -X POST http://localhost:50123/queue --data url=http%3A%2F%2Fgraph.facebook.com%2Fmvayngrib
 
-    // Sample response
-
 ```
+  // Sample response
   {
     "status": "success",
     "data": {
@@ -31,9 +30,8 @@ query:
 
     curl http://localhost:50123/get?id=abcde-fghij
 
-    // Sample response
-
 ```
+  // Sample response
   {
     "status": "success",   // query was successful
     "data": {
