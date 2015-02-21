@@ -18,14 +18,14 @@ query:
 
     // Sample response
 
-    ```json
+```json
     {
       "status": "success",
       "data": {
         "id": "abcde-fghij"
       }
     }
-    ```
+```
 
     // Check results
 
@@ -33,7 +33,7 @@ query:
 
     // Sample response
 
-    ```json
+```json
     {
       "status": "success",   // query was successful
       "data": {
@@ -52,4 +52,4 @@ query:
        }
      }
     }
-    ```
+```
