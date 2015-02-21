@@ -18,13 +18,13 @@ query:
 
     // Sample response
 
-```json
-    {
-      "status": "success",
-      "data": {
-        "id": "abcde-fghij"
-      }
+```
+  {
+    "status": "success",
+    "data": {
+      "id": "abcde-fghij"
     }
+  }
 ```
 
     // Check results
@@ -33,23 +33,22 @@ query:
 
     // Sample response
 
-```json
-    {
-      "status": "success",   // query was successful
-      "data": {
-        "status": "success", // job was successful
-        "details": null,     // here live error messages
-        "result": {
-          "id": "703381",
-          "first_name": "Mark",
-          "gender": "male",
-          "last_name": "Vayngrib",
-          "link": "https://www.facebook.com/mvayngrib",
-          "locale": "en_US",
-          "name": "Mark Vayngrib",
-          "username": "mvayngrib"
-         }
-       }
-     }
+```
+  {
+    "status": "success",   // query was successful
+    "data": {
+      "status": "success", // job was successful
+      "details": null,     // here live error messages
+      "result": {
+        "id": "703381",
+        "first_name": "Mark",
+        "gender": "male",
+        "last_name": "Vayngrib",
+        "link": "https://www.facebook.com/mvayngrib",
+        "locale": "en_US",
+        "name": "Mark Vayngrib",
+        "username": "mvayngrib"
+      }
     }
+  }
 ```
