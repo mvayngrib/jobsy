@@ -1,0 +1,5 @@
+{
+  "db": "./db/jobs.db",
+  "maxConcurrency": 3,
+  "port": 50123
+}

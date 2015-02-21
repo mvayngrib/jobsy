@@ -1,0 +1,40 @@
+{
+  "name": "jobsy",
+  "version": "0.1.0",
+  "description": "REST job queue",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mvayngrib/jobsy"
+  },
+  "keywords": [
+    "jobs",
+    "REST",
+    "queue"
+  ],
+  "author": "Mark Vayngrib <mark.vayngrib@lablz.com> (http://github.com/mvayngrib)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mvayngrib/jobsy/issues"
+  },
+  "homepage": "https://github.com/mvayngrib/jobsy",
+  "dependencies": {
+    "body-parser": "^1.12.0",
+    "express": "^4.11.2",
+    "extend": "^2.0.0",
+    "leveldown": "^0.10.4",
+    "levelup": "^0.19.0",
+    "mkdirp": "^0.5.0",
+    "node-uuid": "^1.4.2",
+    "request": "^2.53.0",
+    "typeforce": "^0.1.0"
+  },
+  "devDependencies": {
+    "rimraf": "^2.2.8",
+    "superagent": "^0.21.0",
+    "tape": "^3.5.0"
+  }
+}
