@@ -24,7 +24,7 @@ var dbPaths = [];
 test('start static files server', function(t) {
   // setup
 
-  var fixturesPath = path.join(__dirname, 'fixtures');
+  var fixturesPath = path.resolve('./test/fixtures');
   var port = 50234;
   staticAppUrl = 'http://localhost:' + port;
   staticApp = express();
@@ -65,7 +65,7 @@ test('limit queue max concurrency', function(t) {
   var numJobs = 10;
   t.plan(numJobs * 3 + 1); // (push + start + end) per task, and queue empty
 
-  var dbPath = path.join(__dirname, 'testjobs1.db');
+  var dbPath = path.resolve('./test/testjobs1.db');
   dbPaths.push(dbPath);
 
   var maxConcurrency = 2;
@@ -106,8 +106,8 @@ test('job status', function(t) {
   var id;
   var testConf = extend({}, conf);
   var serverUrl = 'http://localhost:' + testConf.port;
-  testConf.db = 'testjobs2.db';
-  dbPaths.push(path.join(__dirname, testConf.db));
+  testConf.db = './test/testjobs2.db';
+  dbPaths.push(path.resolve(testConf.db));
 
   var server = queueServer(testConf, onready);
 
